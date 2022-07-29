@@ -9,8 +9,8 @@ const app = express();
 
 function middleware1(req, res, next){
     console.log("I am a middleware 111")
-   const errObj = new Error('I am a error ')
-    next(errObj); // instructs code to move onto the next middleware
+   const errObj = new Error('I am a error ') // a forced error for demo purposes
+    next(); // instructs code to move onto the next middleware
 }
 
 function errorHandler(err, req, res, next){ // an elegant want to deal with errors without crashing my site
